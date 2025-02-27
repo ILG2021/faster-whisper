@@ -1407,7 +1407,7 @@ class WhisperModel:
                 length_penalty=options.length_penalty,
                 repetition_penalty=options.repetition_penalty,
                 no_repeat_ngram_size=options.no_repeat_ngram_size,
-                max_length=max_length,
+                max_length=448 * 2 - len(prompt),
                 return_scores=True,
                 return_no_speech_prob=True,
                 suppress_blank=options.suppress_blank,
